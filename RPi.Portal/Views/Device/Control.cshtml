@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Control";
+}
+
+<h2>Control</h2>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>GPIO</th>
+            <th>Status</th>
+        </tr>
+
+    </thead>
+    @for (int i = 0; i < 7; i++)
+    {
+        <tr>
+            <td>GPIO_GEN @i</td>
+            <td>Buton</td>
+        </tr>
+    }
+
+</table>

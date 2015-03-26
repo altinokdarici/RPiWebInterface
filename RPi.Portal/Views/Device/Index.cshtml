@@ -1,0 +1,24 @@
+﻿@model List<RPi.Portal.DataAccess.Device>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Devices</h2>
+@Html.ActionLink("Add Device", "Create")
+<table>
+    <thead>
+        <tr>
+            <th>Device Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Code, "Control", new { deviceId = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

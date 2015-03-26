@@ -1,0 +1,18 @@
+﻿@model RPi.Portal.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    @Html.Label("Email")
+    <br />
+    @Html.TextBoxFor(x => Model.Email)
+    <br />
+    @Html.Label("Password")
+    <br />
+    @Html.PasswordFor(x => Model.Password)
+    <input value="Login" type="submit" />
+}

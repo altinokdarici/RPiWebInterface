@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.Portal", "RPi.Portal\RPi.Portal.csproj", "{69474CAF-A4E8-489A-B76F-702B0DA81F87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.Client", "RPi.Client\RPi.Client.csproj", "{C67D4AE7-BCCC-47A5-85C1-65998BE1A185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.Models", "RPi.Models\RPi.Models.csproj", "{809C92C9-DED7-4765-B382-1482A82C32D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69474CAF-A4E8-489A-B76F-702B0DA81F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69474CAF-A4E8-489A-B76F-702B0DA81F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69474CAF-A4E8-489A-B76F-702B0DA81F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69474CAF-A4E8-489A-B76F-702B0DA81F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67D4AE7-BCCC-47A5-85C1-65998BE1A185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67D4AE7-BCCC-47A5-85C1-65998BE1A185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67D4AE7-BCCC-47A5-85C1-65998BE1A185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67D4AE7-BCCC-47A5-85C1-65998BE1A185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809C92C9-DED7-4765-B382-1482A82C32D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809C92C9-DED7-4765-B382-1482A82C32D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809C92C9-DED7-4765-B382-1482A82C32D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809C92C9-DED7-4765-B382-1482A82C32D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

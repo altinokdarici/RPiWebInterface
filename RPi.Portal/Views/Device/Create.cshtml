@@ -1,0 +1,11 @@
+﻿@model RPi.Portal.DataAccess.Device
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Device", FormMethod.Post))
+{
+    @Html.EditorFor(x => x.Code)
+    <input type="submit" value="Kaydet" />
+}
