@@ -37,3 +37,5 @@ exit 0
 
 
 ###Register for auto start
+sudo chmod +x /etc/init.d/RPiClient
+sudo update-rc.d RPiClient defaults
