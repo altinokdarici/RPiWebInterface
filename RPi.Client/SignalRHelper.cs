@@ -14,7 +14,7 @@ namespace RPi.Client
         static IHubProxy hubProxy;
         static SignalRHelper()
         {
-            hubConnection = new HubConnection("http://192.168.48.50/RPi.Portal/signalr");
+            hubConnection = new HubConnection("http://piportal.azurewebsites.net/signalr");
             hubProxy = hubConnection.CreateHubProxy("DeviceHub");
             hubConnection.StateChanged += HubConnection_StateChanged;
 

@@ -16,11 +16,12 @@ namespace RPi.Client
                 {
                     try
                     {
-                        flagRetry = false;
                         Start();
+                        flagRetry = false;
                     }
                     catch (Exception ex)
                     {
+                        Console.WriteLine(ex.ToString());
                         flagRetry = true;
                     }
                 }
