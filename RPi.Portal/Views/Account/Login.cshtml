@@ -14,5 +14,9 @@
     @Html.Label("Password")
     <br />
     @Html.PasswordFor(x => Model.Password)
+    <br />
     <input value="Login" type="submit" />
 }
+
+<br />
+@Html.ActionLink("Create an account", "Create")

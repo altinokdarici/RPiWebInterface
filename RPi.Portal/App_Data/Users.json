@@ -1,1 +1,12 @@
-[{"Id":"c0e0ceca-af06-45be-a6d3-556262f0efcb","EMail":"altinok.darici@outlook.com","Password":"123456Aa.","Devices":[{"Id":"b362fe21-730b-4f2f-b5a5-5f248ef257c6","Code":"1"},{"Id":"ab7d9461-ea55-4614-9e5c-fc7bd25f4b51","Code":"324"},{"Id":"af8fd87d-0434-4f00-8081-db5be5808a24","Code":"144245"},{"Id":"ae677fbb-be33-4fc9-9e77-2846de367687","Code":"141734"},{"Id":"1984f723-f975-4e0c-89a3-aabaa8dd22a5","Code":"142343"}]}]
+[
+    {
+        "Id": "c0e0ceca-af06-45be-a6d3-556262f0efcb",
+        "EMail": "altinok.darici@outlook.com",
+        "Password": "123456Aa.",
+        "Devices": [
+            { "Id": "ae677fbb-be33-4fc9-9e77-2846de367687", "Code": "141734" },
+            { "Id": "1984f723-f975-4e0c-89a3-aabaa8dd22a5", "Code": "142343" }
+        ]
+    },
+    { "Id": "6836c585-4c35-4ca7-b583-b30362863cf7", "EMail": "adarici@outlook.com", "Password": "1234", "Devices": [ ] }
+]

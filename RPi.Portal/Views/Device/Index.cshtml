@@ -9,7 +9,7 @@
     @foreach (var item in Model)
     {
         <li>
-           Code: @Html.ActionLink(item.Code, "Control", new { deviceId = item.Id })
+            Code: @Html.ActionLink(item.Code, "Control", new { deviceId = item.Id }) | @Html.ActionLink("Delete", "Delete", new { deviceId = item.Id }, new { style = "margin-left:20px;" })
         </li>
     }
 

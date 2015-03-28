@@ -64,5 +64,20 @@ namespace RPi.Portal.Controllers
             }
             return new HttpStatusCodeResult(200);
         }
+
+        [HttpGet]
+        public ActionResult Delete(Guid deviceId)
+        {
+            if (!Helpers.SessionHelper.User.Devices.Any(x => x.Id == deviceId))
+            {
+                return new HttpStatusCodeResult(404);
+            }
+            using (DataAccess.Entity ent = new DataAccess.Entity())
+            {
+                ent.DeleteDevice(deviceId, Helpers.SessionHelper.User.Id);
+                Helpers.SessionHelper.User = ent.GetUser(Helpers.SessionHelper.User.Id);
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

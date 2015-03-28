@@ -21,6 +21,12 @@ namespace RPi.Portal.DataAccess
             return users.FirstOrDefault(x => x.EMail == email && x.Password == password);
         }
         [MethodImpl(MethodImplOptions.Synchronized)]
+        public bool IsUserExist(string email)
+        {
+            List<User> users = Newtonsoft.Json.JsonConvert.DeserializeObject<List<User>>(System.IO.File.ReadAllText(JsonUrl));
+            return users.Any(x => x.EMail == email);
+        }
+        [MethodImpl(MethodImplOptions.Synchronized)]
         public User GetUser(Guid Id)
         {
             List<User> users = Newtonsoft.Json.JsonConvert.DeserializeObject<List<User>>(System.IO.File.ReadAllText(JsonUrl));
@@ -67,6 +73,19 @@ namespace RPi.Portal.DataAccess
                     d.Code = code;
                     u.Devices.Add(d);
                 }
+            }
+            System.IO.File.WriteAllText(JsonUrl, Newtonsoft.Json.JsonConvert.SerializeObject(users));
+        }
+
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        public void DeleteDevice(Guid deviceId, Guid userId)
+        {
+            List<User> users = Newtonsoft.Json.JsonConvert.DeserializeObject<List<User>>(System.IO.File.ReadAllText(JsonUrl));
+            var u = users.FirstOrDefault(x => x.Id == userId);
+            if (u != null)
+            {
+                Device d = u.Devices.FirstOrDefault(x => x.Id == deviceId);
+                u.Devices.Remove(d);
             }
             System.IO.File.WriteAllText(JsonUrl, Newtonsoft.Json.JsonConvert.SerializeObject(users));
         }

@@ -1,0 +1,25 @@
+﻿@model RPi.Portal.Models.CreateAccountViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Account", FormMethod.Post))
+{
+    @Html.Label("Email")
+    <br />
+    @Html.TextBoxFor(x => Model.Email)
+    <br />
+    @Html.Label("Password")
+    <br />
+    @Html.PasswordFor(x => Model.Password)
+    <br />
+    @Html.Label("Confirm Password")
+    <br />
+    @Html.PasswordFor(x => Model.PasswordConfirm)
+    <br />
+    <input value="Create" type="submit" />
+
+    @Html.ValidationSummary()
+}

@@ -40,5 +40,40 @@ namespace RPi.Portal.Controllers
             return RedirectToAction("Login");
 
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Models.CreateAccountViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+
+            using (DataAccess.Entity ent = new DataAccess.Entity())
+            {
+                if (ent.IsUserExist(model.Email))
+                {
+                    ModelState.AddModelError("", "This email address is already registed!");
+                    return View();
+                }
+
+                ent.SaveUser(new DataAccess.User()
+                {
+                    EMail = model.Email,
+                    Password = model.Password,
+                    Devices = new List<DataAccess.Device>(),
+                    Id = Guid.NewGuid()
+                });
+                Helpers.SessionHelper.User = ent.GetUser(model.Email, model.Password);
+                return RedirectToAction("Index", "Device");
+            }
+        }
     }
 }
