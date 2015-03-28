@@ -6,11 +6,13 @@ Raspberry Pi 2 GPIO Web Interface (one of my hobby project)
 sudo mkdir /home/pi/RPiClient
 
 ##create update script
+<pre>
 cd /home/pi/RPiClient
 sudo nano update
 rm -f *.*
 wget http://www.altinokdarici.com/RPi/RPiClient.tar
 tar -xf RPiClient
+</pre>
 
 run the below script to download or update client program
 sudo bash /home/pi/RPiClient/update
@@ -37,5 +39,7 @@ exit 0
 </pre>
 
 ###Register for auto start
+<pre>
 sudo chmod +x /etc/init.d/RPiClient
 sudo update-rc.d RPiClient defaults
+</pre>
