@@ -16,7 +16,7 @@ run the below script to download or update client program
 sudo bash /home/pi/RPiClient/update
 
 ##Auto start
-
+<pre>
 sudo nano /etc/init.d/RPiClient
 case "$1" in
   start)
@@ -32,9 +32,9 @@ case "$1" in
     exit 1
     ;;
 esac
-
+ 
 exit 0
-
+</pre>
 
 ###Register for auto start
 sudo chmod +x /etc/init.d/RPiClient
