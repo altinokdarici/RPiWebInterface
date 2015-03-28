@@ -9,24 +9,34 @@ namespace RPi.Client
 
         public static void Main(string[] args)
         {
-            //if (WiringPi.Init.WiringPiSetup() != -1)
-            // {
-            SignalRHelper.Start();
+            if (WiringPi.Init.WiringPiSetup() != -1)
+            {
+                SignalRHelper.Start();
 
-            SignalRHelper.On<Models.Message>("message", OnMessage);
-            CompletedEvent.WaitOne();
-            /* }
-             else
-             {
-                 Console.WriteLine("WiringPiSetup failed");
-             }*/
+                SignalRHelper.On<Models.Message>("message", OnMessage);
+                CompletedEvent.WaitOne();
+            }
+            else
+            {
+                Console.WriteLine("WiringPiSetup failed");
+            }
             Console.ReadLine();
 
         }
 
         private static void OnMessage(Models.Message message)
         {
-            Console.WriteLine(string.Format("GPIO_GEN {0}-{1} at {2}", message.GpioNo, message.Status, DateTime.Now.ToString()));
+            Console.WriteLine(string.Format("GPIO_GEN {0}-{1} at {2} ---", message.GpioNo, message.Status, DateTime.Now.ToString()));
+            if (message.Status)
+            {
+                WiringPi.SoftPwm.Create(message.GpioNo, 0, 100);
+                WiringPi.SoftPwm.Write(message.GpioNo, 255);
+             
+            }
+            else
+            {
+                WiringPi.SoftPwm.Stop(message.GpioNo);
+            }
         }
     }
 
