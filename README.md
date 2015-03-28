@@ -3,15 +3,16 @@ Raspberry Pi 2 GPIO Web Interface (one of my hobby project)
 
 #Client Config
 ##create RPiClient folder under /home/pi
+<pre>
 sudo mkdir /home/pi/RPiClient
-
+</pre>
 ##create update script
 <pre>
 cd /home/pi/RPiClient
 sudo nano update
 rm -f *.*
 wget http://www.altinokdarici.com/RPi/RPiClient.tar
-tar -xf RPiClient
+tar -xf RPiClient.tar
 </pre>
 
 run the below script to download or update client program
