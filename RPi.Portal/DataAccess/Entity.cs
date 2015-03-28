@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 namespace RPi.Portal.DataAccess
 {
-    class Entity : IDisposable
+    public class Entity : IDisposable
     {
         private readonly string JsonUrl = HttpContext.Current.Server.MapPath("~/App_Data/Users.json");
 

@@ -2,13 +2,12 @@
     ViewBag.Title = "Control";
 }
 
-<h2>Control</h2>
-
+<h2>Control @ViewBag.DeviceCode</h2>
 
 <table>
     <thead>
         <tr>
-            <th>GPIO</th>
+            <th style="width:100px">GPIO</th>
             <th>Status</th>
         </tr>
 
@@ -16,9 +15,25 @@
     @for (int i = 0; i < 7; i++)
     {
         <tr>
-            <td>GPIO_GEN @i</td>
-            <td>Buton</td>
+            <td>GPIO_GEN @i   </td>
+            <td>
+                <button onclick="sendChangeStatus(@i,1)">Aç (1)</button>
+                <button onclick="sendChangeStatus(@i,0)">Kapat (0)</button>
+            </td>
         </tr>
     }
 
 </table>
+
+<script type="text/javascript">
+    var deviceId = "@ViewBag.DeviceId";
+    function sendChangeStatus(pinNo, status) {
+        var jqxhr = $.get("ChangeStatus?pinNo=" + pinNo + "&status=" + status + "&deviceId=" + deviceId)
+          .done(function () {
+              alert("OK");
+          })
+          .fail(function () {
+              alert("ERROR");
+          });
+    }
+</script>

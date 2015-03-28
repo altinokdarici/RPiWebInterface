@@ -28,9 +28,17 @@ namespace RPi.Portal.Controllers
                 else
                 {
                     Helpers.SessionHelper.User = user;
-                    return RedirectToAction("Manage", "Device");
+                    return RedirectToAction("Index", "Device");
                 }
             }
+        }
+
+        [HttpGet]
+        public ActionResult LogOut()
+        {
+            Helpers.SessionHelper.User = null;
+            return RedirectToAction("Login");
+
         }
     }
 }

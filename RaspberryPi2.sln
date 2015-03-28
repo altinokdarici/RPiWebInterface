@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22609.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.Portal", "RPi.Portal\RPi.Portal.csproj", "{69474CAF-A4E8-489A-B76F-702B0DA81F87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.Client", "RPi.Client\RPi.Client.csproj", "{C67D4AE7-BCCC-47A5-85C1-65998BE1A185}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.Models", "RPi.Models\RPi.Models.csproj", "{809C92C9-DED7-4765-B382-1482A82C32D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prod", "Prod", "{3DD84DBB-E34C-4E36-8269-196A8B063322}"
+	ProjectSection(SolutionItems) = preProject
+		Prod\RPiClient.tar = Prod\RPiClient.tar
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

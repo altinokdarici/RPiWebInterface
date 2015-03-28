@@ -10,5 +10,7 @@ namespace RPi.Models
     {
         public int GpioNo { get; set; }
         public bool Status { get; set; }
+
+
     }
 }

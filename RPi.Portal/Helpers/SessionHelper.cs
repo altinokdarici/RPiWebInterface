@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
+﻿using System.Web;
 
 namespace RPi.Portal.Helpers
 {
-    class SessionHelper
+    public class SessionHelper
     {
         public static DataAccess.User User
         {

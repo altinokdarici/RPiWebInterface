@@ -1,10 +1,5 @@
-﻿using Microsoft.AspNet.SignalR.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace RPi.Client
 {
@@ -31,7 +26,7 @@ namespace RPi.Client
 
         private static void OnMessage(Models.Message message)
         {
-            System.Console.WriteLine(string.Format("{0}-{1}", message.GpioNo, message.Status));
+            Console.WriteLine(string.Format("GPIO_GEN {0}-{1} at {2}", message.GpioNo, message.Status, DateTime.Now.ToString()));
         }
     }
 
