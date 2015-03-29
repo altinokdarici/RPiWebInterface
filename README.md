@@ -1,5 +1,6 @@
 # RPiWebInterface
 Raspberry Pi 2 GPIO Web Interface (one of my hobby project)
+Portal: http://piportal.azurewebsites.net/
 
 #Client Config
 ##create RPiClient folder under /home/pi
